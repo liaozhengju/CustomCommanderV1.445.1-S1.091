@@ -22293,7 +22293,7 @@ scripts = [
 		    (store_div, ":relation_with_liege_change", ":relation_with_troop", 8), #changed from 16
 		    (val_sub, ":relation_with_liege_change", 2),
 
-		    (val_clamp, ":relation_with_liege_change", -5, 3),
+		    (val_clamp, ":relation_with_liege_change", -4, 3),
 			
 			(try_begin),
 				#upstanding and goodnatured lords will not lose relation unless they actively dislike the other lord
