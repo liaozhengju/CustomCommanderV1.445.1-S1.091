@@ -2036,6 +2036,8 @@ slot_upgrade_hand   = 441
 slot_upgrade_horse  = 442
 slot_troop_accumulated_weekly_wage  = 443
 
+slot_item_temp_slot     = 444
+slot_agent_temp_slot     = 445
 
 #slot_troop_commensalism_troop   = 431
 

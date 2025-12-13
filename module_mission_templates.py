@@ -4452,9 +4452,32 @@ mission_templates = [
         #(call_script, "script_battle_calculate_initial_powers"), #deciding run away method changed and that line is erased
         ]),
       
+      # (3, 0, 0, [
+      #     (call_script, "script_apply_effect_of_other_people_on_courage_scores"),
+      #         ], []), #calculating and applying effect of people on others courage scores
+
+      # ====== 108 heroes begin ======
+      # change
       (3, 0, 0, [
-          (call_script, "script_apply_effect_of_other_people_on_courage_scores"),
-              ], []), #calculating and applying effect of people on others courage scores
+        # (display_message,"@111111"),
+        (get_player_agent_no, ":player_agent"),
+        (assign, ":rout_num", 0),
+        (try_for_agents, ":agent"),
+        (agent_is_human, ":agent"),
+        (agent_is_alive, ":agent"),
+        (neg | agent_is_routed, ":agent"),
+        (neq, ":agent", ":player_agent"),
+        (agent_slot_eq, ":agent", slot_agent_is_running_away, 1),
+        (item_set_slot, ":rout_num", slot_item_temp_slot, ":agent"),
+        (val_add, ":rout_num", 1),
+        (try_end),
+        (gt, ":rout_num", 0),
+        # (assign,reg1,":rout_num"),
+        # (display_message,"@rout num :{reg1}"),
+        (call_script, "script_apply_effect_of_other_people_on_courage_scores_new", ":rout_num"),  # 108 heroes changed
+      ], [
+       ]),  # calculating and applying effect of people on others courage scores
+      # ====== 108 heroes end ======
 
       (3, 0, 0, [
           (try_for_agents, ":agent_no"),
