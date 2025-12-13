@@ -9323,7 +9323,7 @@ game_menus = [
      (val_mul, ":improvement_cost", ":multiplier"),
      (val_div, ":improvement_cost", 20),
      
-     (store_div, ":improvement_time", ":improvement_cost", 200), ## CC
+     (store_div, ":improvement_time", ":improvement_cost", 1000), ## CC
      (val_add, ":improvement_time", 3),
      
      (assign, reg5, ":improvement_cost"),
