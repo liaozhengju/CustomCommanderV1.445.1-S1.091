@@ -16294,7 +16294,7 @@ game_menus = [
            (troop_set_slot, ":npc_no", slot_troop_payment_request, 0),
          (try_end),
          # add renown and honor
-         (call_script, "script_change_troop_renown", "trp_player", 500),
+         (call_script, "script_change_troop_renown", "trp_player", 30),
          (assign, reg7, "$player_honor"),
          (val_add, reg7, 10),
          (display_message, "@Player honor is increased by 10 and it is now {reg7}."),
