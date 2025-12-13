@@ -2597,12 +2597,12 @@ common_battle_victory_display = (
 common_siege_refill_ammo = (
   120, 0, 0, [],
   [#refill ammo of defenders every two minutes.
-    (get_player_agent_no, ":player_agent"),
+    # (get_player_agent_no, ":player_agent"),
     (try_for_agents,":cur_agent"),
-      (neq, ":cur_agent", ":player_agent"),
+      # (neq, ":cur_agent", ":player_agent"),
       (agent_is_alive, ":cur_agent"),
       (agent_is_human, ":cur_agent"),
-##      (agent_is_defender, ":cur_agent"),
+      (agent_is_defender, ":cur_agent"),
       (agent_get_team, ":agent_team", ":cur_agent"),
       (this_or_next|eq, ":agent_team", "$defender_team"),
       (eq, ":agent_team", "$defender_team_2"),
