@@ -61,7 +61,7 @@ ai_bhvr_negotiate_party = 7
 ai_bhvr_in_town         = 8
 ai_bhvr_travel_to_ship  = 9
 ai_bhvr_escort_party    = 10
-ai_bhvr_driven_by_party = 11
+ai_bhvr_driven_by_party = 10
 
 #experience constants
 player_loot_share = 10
