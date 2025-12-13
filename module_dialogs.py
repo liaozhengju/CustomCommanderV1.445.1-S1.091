@@ -21650,7 +21650,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    [], "Don't worry {sir/madam}. Your name will be cheered and toasted here all night.", "tavernkeeper_pretalk",
    [
        (troop_remove_gold, "trp_player", "$temp"),
-       (call_script, "script_change_player_relation_with_center", "$current_town", 1),
+       (call_script, "script_change_player_relation_with_center", "$current_town", 2),
        (store_current_hours,":cur_hours"),
        (assign, "$buy_drinks_last_time", ":cur_hours"),
        ]],
