@@ -1717,7 +1717,7 @@ simple_triggers = [
             (try_end),
           (else_try),
             (party_slot_eq, ":center_no", slot_party_type, spt_castle),
-            (assign, ":cur_rents", 1200),
+            (assign, ":cur_rents", 1800),
           (else_try),  
             (party_slot_eq, ":center_no", slot_party_type, spt_town),
             (assign, ":cur_rents", 2400),
