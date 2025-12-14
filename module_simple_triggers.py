@@ -1997,7 +1997,10 @@ simple_triggers = [
 		 (ge, ":template", "pt_forest_bandit_lair"), ## CC fix
 		
 		 (store_distance_to_party_from_party, ":distance", "p_main_party", ":bandit_camp"),
-	     (lt, ":distance", 3), 
+         (party_get_skill_level, ":spotting_dist", "p_main_party", "skl_spotting"),
+         (val_add, ":spotting_dist", 3),
+         (lt, ":distance", ":spotting_dist"),
+	     # (lt, ":distance", 3),
 	     (party_set_flags, ":bandit_camp", pf_disabled, 0),
 	     (party_set_flags, ":bandit_camp", pf_always_visible, 1),    
 	   (try_end),
