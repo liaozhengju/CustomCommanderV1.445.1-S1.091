@@ -570,7 +570,7 @@ troops = [
   ["vaegir_marksman","Vaegir Marksman","Vaegir Marksmen",tf_guarantee_ranged|tf_guarantee_all_armors,0,0,fac_kingdom_2,
    [itm_vaegir_arrows_back,itm_vaegir_arrows,itm_axe,itm_voulge,itm_sword_khergit_2,(itm_nomad_bow,imod_masterwork),(itm_nomad_bow,imod_masterwork),itm_war_bow,
     itm_studded_leather_coat,itm_studded_leather_coat,itm_leather_boots,itm_vaegir_lamellar_helmet,itm_vaegir_spiked_helmet,itm_vaegir_fur_helmet],
-   attr(17,13,7,7)|level(24),wp_one_handed (110) | wp_two_handed (110) | wp_polearm (110) | wp_archery (192) | wp_crossbow (110) | wp_throwing (110),knows_power_draw_6|knows_ironflesh_2|knows_athletics_3|knows_power_strike_2|knows_power_throw_1|knows_shield_3,vaegir_face_young_1, vaegir_face_older_2],
+   attr(17,13,7,7)|level(24),wp_one_handed (110) | wp_two_handed (110) | wp_polearm (110) | wp_archery (175) | wp_crossbow (110) | wp_throwing (110),knows_power_draw_6|knows_ironflesh_2|knows_athletics_3|knows_power_strike_2|knows_power_throw_1|knows_shield_3,vaegir_face_young_1, vaegir_face_older_2],
   # ["vaegir_eagleeye_archer","Vaegir EagleEye Archer","Vaegir EagleEye Archer",tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves,0,0,fac_kingdom_2,
    # [itm_barbed_arrows,itm_barbed_arrows,itm_war_bow,itm_war_bow,itm_long_bardiche,itm_long_bardiche,itm_scimitar_b,itm_scimitar_b,
     # itm_lamellar_vest,itm_lamellar_vest,itm_leather_boots,itm_leather_boots,itm_vaegir_lamellar_helmet,itm_vaegir_lamellar_helmet,itm_leather_gloves,itm_leather_gloves],
