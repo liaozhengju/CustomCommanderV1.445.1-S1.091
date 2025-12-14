@@ -2,7 +2,7 @@
 # Point export_dir to the folder you will be keeping your module
 # Make sure you use forward slashes (/) and NOT backward slashes (\)
 
-export_dir = "../"
+export_dir = "D:/Games/Mount&Blade Warband/Modules/Custom Commander V1.445.1-S1.091 Update/"
 
 # Several possible variants for export_dir variable:
 
