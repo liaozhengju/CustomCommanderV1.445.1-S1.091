@@ -4474,7 +4474,7 @@ mission_templates = [
         (gt, ":rout_num", 0),
         # (assign,reg1,":rout_num"),
         # (display_message,"@rout num :{reg1}"),
-        (call_script, "script_apply_effect_of_other_people_on_courage_scores_new", ":rout_num"),  # 108 heroes changed
+        (call_script, "script_apply_effect_of_other_people_on_courage_scores", ":rout_num"),  # 108 heroes changed
       ], [
        ]),  # calculating and applying effect of people on others courage scores
       # ====== 108 heroes end ======
