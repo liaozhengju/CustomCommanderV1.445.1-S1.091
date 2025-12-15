@@ -181,12 +181,12 @@ skill_overhaul_reduce_damage = (
             (val_div, ":dest_damage", 100),
           (try_end),
           ## lords and their horses get only 1/2 damage
-          #(try_begin),
-            #(troop_is_hero, ":human_troop_no"),
-            #(agent_get_party_id, ":human_agent_party", ":human_agent"),
-            #(gt, ":human_agent_party", "p_main_party"),
-            #(val_div, ":dest_damage", 2),
-          #(try_end),
+          (try_begin),
+            (troop_is_hero, ":human_troop_no"),
+            (agent_get_party_id, ":human_agent_party", ":human_agent"),
+            (gt, ":human_agent_party", "p_main_party"),
+            (val_div, ":dest_damage", 2),
+          (try_end),
         (try_end),
         # skl_ironflesh reduce 1 damage every 3 levels
         (try_begin),
