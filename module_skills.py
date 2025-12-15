@@ -85,7 +85,7 @@ skills = [
   ("power_draw","Power Draw",sf_base_att_str,15,"Lets character use more powerful bows. Each point to this skill (up to four plus power-draw requirement of the bow) increases bow damage by 14%%. (Personal skill) Max level: 15"),
   ("power_throw","Power Throw",sf_base_att_str,15,"Each point to this skill increases throwing damage by 10%%. (Personal skill) Max level: 15"),
   ("power_strike","Power Strike",sf_base_att_str,15,"Each point to this skill increases melee damage by 8%%. (Personal skill) Max level: 15"), 
-  ("ironflesh","Ironflesh",sf_base_att_str,15,"Each point to this skill increases hit points by +2. Reduces 1 damage to you every three levels. For soldiers, each point to this skill gives a 3%% chance to be wounded rather than killed by a mortally struck. (Personal skill) Max level: 15"), 
+  ("ironflesh","Ironflesh",sf_base_att_str,15,"Each point to this skill increases hit points by +2. Reduces 1 damage to you every 2 levels. For soldiers, each point to this skill gives a 3%% chance to be wounded rather than killed by a mortally struck. (Personal skill) Max level: 15"),
   ("physique","Physique",sf_base_att_str|sf_inactive,10,"Reduces damage suffered by 4%% per skill level. (Personal skill) Max level: 10"), 
   ("reserved_3",) + reserved_skill, 
   ## skill overhaul

@@ -188,13 +188,13 @@ skill_overhaul_reduce_damage = (
             (val_div, ":dest_damage", 2),
           (try_end),
         (try_end),
-        # skl_ironflesh reduce 1 damage every 3 levels
+        # skl_ironflesh reduce 1 damage every 2 levels
         (try_begin),
           (gt, ":item_id", -1), # do not reduce damage by fist or foot
           (agent_is_human, ":inflicted_agent"),
           (agent_get_troop_id, ":human_troop_no", ":inflicted_agent"),
           (store_skill_level, ":ironflesh_level", "skl_ironflesh", ":human_troop_no"),
-          (val_div, ":ironflesh_level", 3),
+          (val_div, ":ironflesh_level", 2),
           (val_sub, ":dest_damage", ":ironflesh_level"),
         (try_end),
         (val_max, ":dest_damage", 0),
