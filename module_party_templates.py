@@ -47,8 +47,8 @@ party_templates = [
 
 ## CC
   ("black_khergit_raiders","Black Khergit Raiders",icon_khergit_horseman_b|carries_goods(2),0,fac_black_khergits,bandit_personality,[(trp_black_khergit_guard,2,20),(trp_black_khergit_lancer,6,14),(trp_black_khergit_horseman,10,10)]),
-  ("dark_hunters","Dark Hunters",icon_gray_knight,0,fac_dark_knights,soldier_personality,[(trp_dark_knight,4,9),(trp_dark_sniper,5,12),(trp_dark_hunter,8,15)]),
-  ("dark_followers","Dark Followers",icon_gray_knight|carries_goods(2),0,fac_dark_followers,bandit_personality,[(trp_dark_cavalry,4,11),(trp_dark_sharpshooter,5,12), (trp_dark_follower,10,25)]),
+  ("dark_hunters","Dark Hunters",icon_gray_knight,0,fac_dark_knights,soldier_personality,[(trp_dark_knight,13,40),(trp_dark_sniper,10,20),(trp_dark_hunter,8,15)]),
+  ("dark_followers","Dark Followers",icon_gray_knight|carries_goods(2),0,fac_dark_followers,bandit_personality,[(trp_dark_cavalry,4,11),(trp_dark_sharpshooter,5,14), (trp_dark_follower,10,30)]),
   
   ("forest_bandits","Forest Bandits",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_veteran_forest_bandit,4,11),(trp_trained_forest_bandit,5,14), (trp_forest_bandit,10,30)]),
   ("taiga_bandits","Tundra Bandits",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_veteran_taiga_bandit,4,9),(trp_trained_taiga_bandit,5,12), (trp_taiga_bandit,9,29)]),

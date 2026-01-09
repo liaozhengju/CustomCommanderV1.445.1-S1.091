@@ -35642,16 +35642,16 @@ scripts = [
       (set_spawn_radius, 35),
       (spawn_around_party, ":spawn_point", ":bandit_template"),
     (try_end),
-     
-    # dark followers(cancel in s.107)
-    #(try_begin),
-      #(store_num_parties_of_template, ":num_parties", "pt_dark_followers"),
-      #(lt,":num_parties",16), 
-      #(party_template_get_slot, ":spawn_point", "pt_dark_followers", slot_party_template_lair_spawnpoint),
-      #(set_spawn_radius, 3),
-      #(spawn_around_party, ":spawn_point", "pt_dark_followers"),
-    #(try_end),
-    #(party_template_set_slot, "pt_dark_followers", slot_party_template_lair_party, "p_dark_follower_spawn_point"),
+
+    # dark followers
+    (try_begin),
+      (store_num_parties_of_template, ":num_parties", "pt_dark_followers"),
+      (lt,":num_parties",16),
+      (party_template_get_slot, ":spawn_point", "pt_dark_followers", slot_party_template_lair_spawnpoint),
+      (set_spawn_radius, 3),
+      (spawn_around_party, ":spawn_point", "pt_dark_followers"),
+    (try_end),
+    (party_template_set_slot, "pt_dark_followers", slot_party_template_lair_party, "p_dark_follower_spawn_point"),
      
     # dark hunters
     # (try_begin),
