@@ -789,4 +789,5 @@ itm_spear_with_hooked_sickle = 787
 itm_pilgrim_staff = 788
 itm_fake_noble_skullcap = 789
 itm_sergeant_guard_helmet = 790
-itm_items_end = 791
+itm_heavy_steel_bolts = 791
+itm_items_end = 792

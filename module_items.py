@@ -1648,5 +1648,6 @@ items = [
 ["pilgrim_staff","Pilgrim Staff", [("wooden_staff",0)],itp_type_polearm|itp_offset_lance|itp_primary|itp_penalty_with_shield|itp_wooden_parry|itp_wooden_attack,itc_staff|itcf_carry_sword_back,9, weight(3.5)|spd_rtng(120) | weapon_length(115)|swing_damage(36,blunt) | thrust_damage(36,blunt),imodbits_none],
 ["fake_noble_skullcap", "Fake Noble Skullcap", [("skull_cap_new_a",0)], itp_type_head_armor   ,0, 960 , weight(1.0)|abundance(100)|head_armor(50)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
 ["sergeant_guard_helmet", "Sergeant Guard Helmet", [("reinf_helmet_new_fixed",0)], itp_type_head_armor  ,0, 955 , weight(2.5)|abundance(100)|head_armor(50)|body_armor(0)|leg_armor(0)|difficulty(9) ,imodbits_plate ],
+["heavy_steel_bolts","Heavy Steel Bolts", [("bolt_e",0),("flying_bolt_e",ixmesh_flying_ammo),("bolt_bag_e", ixmesh_carry),("bolt_bag_e", ixmesh_inventory)], itp_type_bolts|itp_merchandise|itp_can_penetrate_shield, itcf_carry_quiver_right_vertical, 800,weight(3)|abundance(20)|weapon_length(63)|thrust_damage(10,pierce)|max_ammo(19),imodbits_missile,[], [fac_kingdom_1_noble_rebels, fac_kingdom_5_noble_rebels, fac_kingdom_1, fac_kingdom_5]],
 ["items_end", "Items End", [("shield_round_a",0)], 0, 0, 0, 0, 0],
 ]
