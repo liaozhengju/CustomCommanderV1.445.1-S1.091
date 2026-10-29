@@ -19612,7 +19612,7 @@ scripts = [
                 (assign, ":cur_target_center", -1),
                 (try_for_range, ":cur_village", villages_begin, ":end_cond"),
                   (party_slot_eq, ":cur_village", slot_town_lord, ":giver_troop"),
-                  (party_slot_eq, ":cur_village", slot_village_infested_by_bandits, 1),
+                  (party_slot_ge, ":cur_village", slot_village_infested_by_bandits, 1),
 	              (party_slot_eq, ":cur_village", slot_village_state, svs_normal),
                   (assign, ":cur_target_center", ":cur_village"),
                   (assign, ":end_cond", 0),
