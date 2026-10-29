@@ -37273,7 +37273,7 @@ scripts = [
       (assign, ":continue", 0),
       (try_begin),
         (eq, ":quest_target", 0), #if not quest target
-        (store_random_in_range, ":rand", 0, 100),
+        (store_random_in_range, ":rand", 30, 100),
         ## CC
         (store_troop_faction, ":troop_faction", ":troop_no"),
         (this_or_next|faction_slot_eq, ":troop_faction", slot_faction_leader, ":troop_no"),
