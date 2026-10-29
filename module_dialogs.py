@@ -17841,6 +17841,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    [],
    "Contact your family to arrange for a ransom, my lady.", "close_window",[
     (troop_set_slot, "$g_talk_troop", slot_troop_prisoner_of_party, "$g_encountered_party"),
+    (party_add_prisoners, "$g_encountered_party", "$g_talk_troop", 1), # take prisoner # bug fix native
 	(call_script, "script_change_player_honor", -2),
 	(call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -10),
 
