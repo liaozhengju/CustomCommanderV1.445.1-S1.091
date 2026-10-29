@@ -11051,7 +11051,68 @@ dialogs = [
   (call_script, "script_end_quest", "qst_duel_courtship_rival"),
   ]],
 
+    # Border Incident Mission: Confrontation with the Lord
+    [anyone|plyr, "lord_talk",
+     [
+         (neg|troop_slot_ge, "$g_talk_troop", slot_troop_prisoner_of_party, 0),
+         (check_quest_active, "qst_retaliate_for_border_incident"),
+         (neg|check_quest_concluded, "qst_retaliate_for_border_incident"),
+         (quest_slot_eq, "qst_retaliate_for_border_incident", slot_quest_target_troop, "$g_talk_troop"),
+         (quest_get_slot, ":quest_giver_troop", "qst_retaliate_for_border_incident", slot_quest_giver_troop),
+         (str_store_troop_name, s1, ":quest_giver_troop")
+     ],
+     "You are the instigator behind the recent border attacks! I demand satisfaction, my lord!",
+     "border_incident_challenge_start",
+     []
+     ],
 
+    # Response from lord
+    [anyone, "border_incident_challenge_start",
+     [],
+     "Border attacks? I have done nothing but defend my lands. You are meddling in affairs you do not understand, {sir/madam}.",
+     "border_incident_challenge_response",
+     []
+     ],
+
+    # Player Option 1: Head-on confrontation
+    [anyone|plyr, "border_incident_challenge_response",
+     [],
+     "Your aggression has caused enough suffering. Face me in combat, if you have the courage!",
+     "border_incident_duel_start",
+     []
+     ],
+
+    # Player Option 2: Admit Defeat
+    [anyone|plyr, "border_incident_challenge_response",
+     [],
+     "Perhaps I have judged you too hastily. My apologies...",
+     "lord_pretalk",
+     []
+     ],
+
+    # The duel begins
+    [anyone, "border_incident_duel_start",
+     [
+         (str_store_string, s15, "str_error__wrong_quest_type"),
+         (try_begin),
+         (check_quest_active, "qst_retaliate_for_border_incident"),
+         (neg|check_quest_concluded, "qst_retaliate_for_border_incident"),
+         (quest_slot_eq, "qst_retaliate_for_border_incident", slot_quest_target_troop, "$g_talk_troop"),
+
+         (str_store_string, s15,
+          "@So be it! If it is a fight you want, I will gladly teach you some manners! Draw your weapon!"),
+
+         (else_try),
+         (str_store_string, s15, "@You dare challenge me? Very well, I shall spill your blood here and now!"),
+         (try_end),
+     ],
+     "{s15}",
+     "close_window",
+     [
+         (call_script, "script_change_player_relation_with_troop", "$g_talk_troop", -15),
+         (call_script, "script_set_up_duel_with_troop", "$g_talk_troop"),
+     ]
+     ],
 
 	
   [anyone|plyr,"lord_talk",[(check_quest_active,"qst_deliver_message"),
@@ -24195,6 +24256,55 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
   [anyone|plyr, "mayor_deal_with_bandit_hero_completed", [],
    "It was my pleasure, {s65}.", "close_window",[]],
 ## CC
+
+# ==========================================
+    # Border Incident Mission
+    [anyone, "mayor_begin",
+     [
+         (check_quest_active, "qst_retaliate_for_border_incident"),
+         (check_quest_succeeded, "qst_retaliate_for_border_incident"),
+         (quest_slot_eq, "qst_retaliate_for_border_incident", slot_quest_giver_troop, "$g_talk_troop"),
+         (str_store_party_name, s19, "$current_town"),
+     ],
+     "Bless you, {playername}! Word has reached us that you dealt with that belligerent lord. The border is safe from war for now.\
+    As the townspeople of {s19}, know that we'll be good on our word, and we are ready to pay the {reg12} denars we promised.",
+     "mayor_border_incident_completed",
+     [
+         (assign, reg12, 2000),
+         (add_xp_as_reward, 4000),
+     ]
+     ],
+
+    [anyone|plyr, "mayor_border_incident_completed", [],
+     "Thank you. Let me have the money.", "mayor_border_incident_pay", []],
+    [anyone|plyr, "mayor_border_incident_completed", [],
+     "No need for a payment. I only did what was right.", "mayor_border_incident_no_pay", []],
+
+    [anyone, "mayor_border_incident_pay", [],
+     "Oh, yes, of course. We had already got the money for you.\
+    Here, please accept these {reg12} denars together with our most sincere thanks.\
+    Me and the people of our town will not forget your help.", "close_window",
+     [
+         (call_script, "script_troop_add_gold", "trp_player", reg12),
+         (call_script, "script_change_player_relation_with_center", "$current_town", 5),
+         (call_script, "script_end_quest", "qst_retaliate_for_border_incident"),
+         (assign, "$g_leave_encounter", 1),
+     ]
+     ],
+
+    [anyone, "mayor_border_incident_no_pay", [],
+     "You are indeed an extraordinary person, {sir/madame}, and it is an honour for me to have known you.\
+    You not only stopped a border war, but you won't even accept a reward for it.\
+    Very well, I will not insist on the matter, but please know that you will have our eternal respect and gratitude.",
+     "close_window",
+     [
+         (call_script, "script_change_player_honor", 3),
+         (call_script, "script_change_player_relation_with_center", "$current_town", 8),
+         (call_script, "script_end_quest", "qst_retaliate_for_border_incident"),
+         (assign, "$g_leave_encounter", 1),
+     ]
+     ],
+    # ==========================================
 
   [anyone,"mayor_begin", [(check_quest_active, "qst_persuade_lords_to_make_peace"),
                           (quest_slot_eq, "qst_persuade_lords_to_make_peace", slot_quest_giver_troop, "$g_talk_troop"),

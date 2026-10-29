@@ -20208,8 +20208,8 @@ scripts = [
     (else_try),
         #2 retaliate for border incident
         (is_between, ":giver_troop", mayors_begin, mayors_end),
-        (store_faction_of_troop, ":giver_faction", ":giver_troop"),
-        
+        # (store_faction_of_troop, ":giver_faction", ":giver_troop"),
+        (store_faction_of_party, ":giver_faction", "$g_encountered_party"),
         (neg|check_quest_active, "qst_retaliate_for_border_incident"),
         (quest_slot_eq, "qst_retaliate_for_border_incident", slot_quest_dont_give_again_remaining_days, 0),
         (assign, ":target_leader", 0),
